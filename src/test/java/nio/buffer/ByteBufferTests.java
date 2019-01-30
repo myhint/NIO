@@ -49,9 +49,10 @@ public class ByteBufferTests {
          * 3）mark，其实就是 position,limit,capacity 三者的状态值信息
          * 4）position 就是游标索引值
          * 5）limit 就是 position能够到达的最大索引值
-         * 6）capacity 就是缓冲池初始分配的容量，亦是 limit 所能达到的最大值
+         * 6）capacity 就是缓冲区初始分配的容量，亦是 limit 所能达到的最大值
          */
 
+        // 切换IO模式至数据读取模式
         byteBuffer.flip();
 
         System.out.println("=========================== byteBuffer.flip() ========== ");
@@ -63,6 +64,7 @@ public class ByteBufferTests {
 
         System.out.println("=========================== byteBuffer.get() ========== ");
 
+        // 从缓冲区中读取数据
         System.out.println(byteBuffer.getChar());
 
         System.out.println("capacity :" + byteBuffer.capacity());
