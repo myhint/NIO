@@ -48,7 +48,6 @@ public class DatagramChannelTests {
 
         // 发送数据
         int byteSent = datagramChannel.send(buf, new InetSocketAddress("jenkov.com", 9090));
-
     }
 
 }
